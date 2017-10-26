@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nisum</title>
+	<link rel="stylesheet" type="text/css" href="main-1.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body style="overflow: hidden;">
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+	<div class="container-fluid">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+			data-target="#menu_qa">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+		</button>
+		<div class="navbar-header" id="logo">
+			<a class="navbar-brand" href="javascript:void(0);"> <img
+				src="..\New folder\images\nisumlogo.png">
+			</a>
+
+		</div>
+		<div class="collapse navbar-collapse header-menu" id="menu_qa">
+			<ul class="nav navbar-nav">
+				<li
+					
+					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-20"><a
+					href='all questions.html'>Questions</a></li>
+				<li 
+					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a
+					href='blog.html'>Blog</a></li>
+				<!-- ng-show="mc.profile.username=='admin@gmail.com'" -->
+				<li 
+					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a
+					href='training.html'>Trainings</a></li>
+				<li 
+					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a
+					href='configar.html'>Configurations</a></li>
+				<li 
+					class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a
+					href='#/meetings'>Meetings Room</a></li> 
+				<li><div class="header-search-wrapper">
+						<form id="header_search" method="GET" action=""
+							class="disable-mobile-search">
+							<input type="text" name="keyword" required value=""
+								placeholder="Enter Keywords" autocomplete="off" /> <i
+								class="fa fa-search"></i>
+							<div id="search_preview" class="search-preview empty"></div>
+						</form>
+					</div></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right sidebaropen">
+				<li><a data-toggle="dropdown" href="javascript:void(0);">userName
+						<img class="profImgHeader"/>
+				</a>
+					<ul class="dropdown-menu togglemenu">
+						<li><a href="#/profile"><span
+								class="glyphicon glyphicon-wrench pull-right"></span><span
+								class="dropdown-link-text">Settings</span></a></li>
+						<!-- <li><a href=""><span
+								class="glyphicon glyphicon-lock pull-right"></span><span
+								class="dropdown-link-text">Change Password</span></a></li> -->
+						<li role="separator" class="divider"></li>
+						<li><a href="javascript:void(0);"><span
+								class="glyphicon glyphicon-log-out pull-right"></span><span
+								class="dropdown-link-text">Logout</span></a></li>
+					</ul></li>
+			</ul>
+		</div>
+		<!-- <a class="login-url" data-toggle="dropdown"
+				href="javascript:void(0);">{{mc.profile.username}}<img
+					class="profImgHeader" src="images/userlogo.jpg" /></a> -->
+
+
+
+
+
+	</div>
+</nav>
+<div class="col-md-1 col-xs-1"></div>
+<div class="col-md-9 col-xs-9 modal-submit-questions "
+	style="padding-top: 30px;">
+
+	<div class="col-md-1 col-xs-1" style="margin-top: 50px;">
+		<span class="back"> <i class="fa fa-angle-double-left"></i> <a
+			href="training.html">Back</a>
+		</span>
+	</div>
+	<div class="col-md-12 col-xs-12">
+		 <ul class="tabs-title">
+			<li><h4 class="modal-title active">Online Trainings</h4></li>
+			
+		</ul> 
+		<div class="row irs-all-course-bb clearfix">
+			<div class="col-sm-6 col-md-6 col-lg-4 clearfix"
+				>
+				<div class="irs-lc-grid style2 text-center">
+				
+					<div class="irs-lc-details">
+						<div class="irs-lc-teacher-info">
+							<div class="irs-lct-thumb">
+								<img src="..\New folder\images\userlogo.png" alt="s3.png">
+							</div>
+							<div class="irs-lct-info">
+								with <span class="text-thm2">trainerName</span>
+							</div>
+						</div>
+						<h4>
+							<a href="javascript:void(0);">trainingTitle</a>
+						</h4>
+					</div>
+					<div class="irs-lc-footer">
+						<div class="irs-lc-normal-part">
+							<ul class="list-inline">
+								<li><a href="#"><i class="fa fa-users"></i>noOfStudents</a></li>
+								<li><a href="#"><i class="fa fa-commenting"></i>noOfComments</a></li>
+							</ul>
+						</div>
+						<div class="irs-lc-hover-part">See Course</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div id="trainingModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="irs-cdtls-feture-bot">
+							<ul class="list-group">
+								<li><a class="list-group-item" href="javascript:void(0);"><span
+										class="flaticon-clock-1 text-thm2"></span> Duration <span
+										class="pull-right"><!-- {{modalTraining.customDuration.hours!==0?modalTraining.customDuration.hours+'
+											hr(s)':''}}{{modalTraining.customDuration.minutes!==0?modalTraining.customDuration.minutes+'
+											min(s)':''}} --></span></a></li>
+								<li><a class="list-group-item" href="javascript:void(0);"><span
+										class="flaticon-arrows-4 text-thm2"></span> Skills<span
+										class="pull-right">trainingTitle</span></a></li>
+								<li><a class="list-group-item" href="javascript:void(0);"><span
+										class="flaticon-people-1 text-thm2"></span> Students <span
+										class="pull-right">noOfStudents</span></a></li>
+								<li><a class="list-group-item" href="javascript:void(0);"><span
+										class="flaticon-globe text-thm2"></span> Language <span
+										class="pull-right"> English </span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="irs-courses-dtls-second-para">
+							<p>description</p>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-footer" >
+				<button type="button" class="btn btn-primary" >Join</button>
+				<button type="button" class="btn btn-danger" >Cancel</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<div class="col-md-2 disable-mobile right-sidebar" style="float: right; margin-top: 40px;">
+	<ul>
+		<li class="widget widget-btn">
+			<button type="button" class="action ask-question">
+				<i class="fa fa-plus"></i> <a href="ask.html"> ASK A QUESTION</a>
+			</button>
+		</li>
+		<li class="widget widget-statistic">
+			<ul>
+				<li class="questions-count">
+					<p>Questions
+					</p>
+						<span>0</span>
+				</li>	
+				<li class="members-count">
+					<p>Members
+					</p>
+						<span>1</span>
+				</li>
+			</ul>
+		</li>
+		<li class="widget widget-btn">
+			<button type="button" class="action ask-question">
+				<i class="fa fa-plus"></i> BOOK MEETING ROOM
+			</button>
+		</li>
+		<!-- END widget-statistic -->
+
+	</ul>
+</div>
+<div class="modal fade modal-submit-questions" id="addquestions"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header asks-question">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">
+					<i class="fa fa-times"></i>
+				</button>
+				<ul class="tabs-title">
+					<li id="title-tab-question"><h4 class="modal-title active"
+							id="tab-question">Ask a Question</h4>
+						</a></li>
+					<!-- 	<li id="title-tab-poll"><h4 class="modal-title" id="tab-poll">Create
+							a Poll</h4></li> -->
+				</ul>
+			</div>
+			<div class="modal-body">
+				<div class="<td>userId</td>"></div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+			<div class="PDTOP80">
+				<ui-view></ui-view>
+				<!-- main views -->
+
+				<div>
+					<div class="rightbar" <!-- ng-include="'js/partials/rightsidebar.html' -->"></div>
+				</div>
+				<!-- END RIGHT-SIDEBAR -->
+			</div>
+			<div class="col-md-12 footer">
+		<div class="row" id="footer-row">
+			<div id="footer-container"
+				class="container page-container homecontainer" align="center">
+				&copy; 2017 Nisum Technologies, Inc.</div>
+		</div>
+	</div>
+			<!-- END RIGHT-SIDEBAR -->
+		</div>
+		<!-- END ROW -->
+	</div>
+	<!-- END CONTAINER-FLUID -->
+	<div style="display: none;">
+		<div id="wp-temp_id-wrap"
+			class="wp-core-ui wp-editor-wrap tmce-active">
+			<!-- <link rel='stylesheet' id='dashicons-css'
+				href='https://qaengine.enginethemes.com/wp-includes/css/dashicons.min.css?ver=1463369188'
+				type='text/css' media='all' />
+			<link rel='stylesheet' id='editor-buttons-css'
+				href='https://qaengine.enginethemes.com/wp-includes/css/editor.min.css?ver=1483691856'
+				type='text/css' media='all' /> -->
+			<div id="wp-temp_id-editor-container" class="wp-editor-container">
+				<textarea class="wp-editor-area" rows="20" tabindex="5"
+					autocomplete="off" cols="40" name="post_content" id="temp_id"></textarea>
+			</div>
+		</div>
+
+	</div>
+	<style>
+.footer {
+    height: 27px;
+    background-color: #4B4F60;
+    color: white;
+    padding-top: 6px;
+    font-family: 'Roboto Condensed', sans-serif;
+    bottom: 0;
+}
+
+Inherited from body.home.page-template.page-template-page-questions.page-template-page-questions-php.page.page-id-12.cbp-spmenu-push.ng-scope
+main-1.css:22
+
+
+.page-container {
+	width: 90%;
+}
+
+bootstrap.css: 1585 .container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
+	
+
+
+	<!-- MODAL EDIT PROFILE / CHANGE PASS -->
+	<div class="modal fade modal-edit-profile" id="edit_profile"
+		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">
+						<i class="fa fa-times"></i>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Edit Profile</h4>
+				</div>
+				<div class="modal-body">
+					<div class="author-edit" id="user_avatar_container">
+						<span class="author-avatar image" id="user_avatar_thumbnail">
+						</span>
+						<div class="edit-info-avatar">
+							<a href="javascript:void(0);" class="upload-avatar-btn"
+								id="user_avatar_browse_button"> Upload New Avatar </a> <a
+								href="javascript:void(0);" class="link_change_password">Change
+								Password</a> <a href="javascript:void(0);"
+								class="link_change_profile">Change Profile</a>
+						</div>
+						<span class="et_ajaxnonce" id="b9d2df4a0c"></span>
+					</div>
+
+					<form id="submit_edit_profile"
+						class="form_modal_style edit_profile_form">
+						<label>Full name</label> <input type="text" class="submit-input"
+							maxlength="40" id="display_name" name="display_name"> <label>Location</label>
+						<input type="text" class="submit-input" maxlength="40"
+							id="user_location" name="user_location"> <label>Facebook</label>
+						<input type="text" class="submit-input" maxlength="80"
+							id="user_facebook" name="user_facebook"> <label>Twitter</label>
+						<input type="text" class="submit-input" maxlength="80"
+							id="user_twitter" name="user_twitter"> <label>Google+</label>
+						<input type="text" class="submit-input" maxlength="80"
+							id="user_gplus" name="user_gplus"> <label>Email</label> <input
+							type="text" class="submit-input" id="user_email"
+							name="user_email">
+
+						<div class="clearfix"></div>
+
+						<label>About me</label>
+						<textarea maxlength="350" class="submit-textarea" id="description"
+							name="description"></textarea>
+						<input type="checkbox" name="show_email" id="show_email" /> <label
+							for="show_email" class="checkbox-email"> Make this email
+							public. </label>
+						<div class="clearfix"></div>
+
+						<input type="submit" name="submit" value="Update Profile"
+							class="btn-submit update_profile">
+					</form>
+
+					<form id="submit_edit_password"
+						class="form_modal_style edit_password_form">
+						<label>Old Password</label> <input type="password"
+							class="submit-input" id="old_password" name="old_password">
+						<label>New Password</label> <input type="text"
+							class="submit-input input-password" id="new_password1"
+							name="new_password"> <label>Repeat New Password</label> <input
+							type="text" class="submit-input input-password" id="re_password"
+							name="re_password"> <input type="submit" name="submit"
+							value="Change Password" class="btn-submit update_profile">
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<!-- bootstrap scripts -->
+	<script src='bower_components/moment/min/moment.min.js'></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src='bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'></script>
+	
+		
+	<!-- module scripts -->
+	<script src='js/blogs/blogs.js'></script>
+	<script src='js/questions/questions.js'></script>
+	<script src='js/configurations/configurations.js'></script>
+	<script src='js/trainings/trainings.js'></script>
+	<script src='js/login/login.js'></script>
+	<script src='js/profile/profile.js'></script>
+	<script src='js/meetings/meetings.js'></script>
+	<script src="js/app.js"></script>
+	<script src='js/directives/customDirectives.js'></script>
+
+	<!-- service scripts -->
+	<script src='js/services/commonServices.js'></script>
+	<script src='js/services/blogsService.js'></script>
+	<script src='js/services/categoryService.js'></script>
+	<script src='js/services/questionService.js'></script>
+	<script src='js/services/roleService.js'></script>
+	<script src='js/services/userService.js'></script>
+	<script src='js/services/commentService.js'></script>
+	<script src='js/services/trainingService.js'></script>
+	<script src='js/services/loginLogoutService.js'></script>
+	<script src='js/directives/customDirectives.js'></script>
+
+	<!-- controllers scripts -->
+	<script src='js/blogs/blogsController.js'></script>
+	<script src='js/blogs/blogController.js'></script>
+	<script src="js/questions/questionsController.js"></script>
+	<script src="js/questions/questionReplyController.js"></script>
+	<script src='js/configurations/configurationsController.js'></script>
+	<script src='js/login/loginController.js'></script>
+	<script src='js/profile/profileController.js'></script>
+	<script src='js/questions/addQuestionController.js'></script>
+	<script src='js/trainings/trainingsController.js'></script>
+	<script src='js/trainings/classRoomTrainingsController.js'></script>
+	<script src='js/trainings/myTrainingsController.js'></script>
+	<script src='js/trainings/onlineTrainingsController.js'></script>
+	<script src='js/trainings/createTrainingController.js'></script>
+	<script src='js/questions/editQuestionController.js'></script>
+	<script src='js/meetings/meetingsController.js'></script>
+	<!-- models scripts -->
+	<script src="js/models/categoryModel.factory.js"></script>
+	<script src="js/models/categoryListModel.factory.js"></script>
+	<script src="js/models/roleModel.factory.js"></script>
+	<script src="js/models/roleListModel.factory.js"></script>
+	<script src="js/models/userModel.factory.js"></script>
+	<script src="js/models/userListModel.factory.js"></script>
+	<script src='js/models/questionModel.factory.js'></script>
+	<script src='js/models/questionsListModel.factory.js'></script>
+	<script src='js/models/commentModel.factory.js'></script>
+	<script src='js/models/commentListModel.factory.js'></script>
+	<script src='js/models/replyModel.factory.js'></script>
+	<script src='js/models/replyListModel.factory.js'></script>
+	<script src='js/models/questionReplyListModel.factory.js'></script>
+	<script src='js/models/trainingModel.factory.js'></script>
+	<script src='js/models/trainingListModel.factory.js'></script>
+</body>
+</html>
