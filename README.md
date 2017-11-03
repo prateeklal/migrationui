@@ -1,5 +1,5 @@
-skeleton
-========
+Nisum Portal Migration UI
+=========================
 
 Nisum portal using Backbone, Marionette application using Require.js, Bower, Grunt and LESS
 
@@ -16,7 +16,14 @@ Nisum portal using Backbone, Marionette application using Require.js, Bower, Gru
 
    bower install
 
-You are good to go!
+4. Open terminal and go to the project located path
+
+   grunt connect
+
+Application will be opened in your default browser.
+
+If you would like to change default port, open Gruntfile.js and change port under 
+grunt.initConfig > connect > server > options > port. Also, change port in open also.
 
 
 # Features
@@ -31,4 +38,3 @@ You are good to go!
 - Bootstrap
 - LESS
 - Grunt
-
