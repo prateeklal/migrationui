@@ -3,8 +3,8 @@ module.exports = function(grunt) {
 
   // requirejs compile options
   var compileOptions = {
-      mainConfigFile: 'app/scripts/main.js',
-      baseUrl: 'app/scripts',
+      mainConfigFile: 'app/main.js',
+      baseUrl: 'app',
       include: ['main'],
       out: 'dist/main.min.js',
       removeCombined: false,
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             },
             files: {
               //compiling base.less into styles.css
-              "./app/styles/styles.css":"./app/styles/base.less"
+              "./app/assets/css/styles.css":"./app/assets/css/base.less"
             }
         },
         production: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
           },
           files: {
             //compiling base.less into main.min.css
-            "./dist/main.min.css": "./app/styles/base.less"
+            "./dist/main.min.css": "./app/assets/css/base.less"
           }
         }
     },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
     watch: {
         less: {
             // Watch all .less files from the styles directory)
-            files: ['app/styles/*.less'],
+            files: ['app/assets/css/*.less'],
             tasks: ['less'],
             // Reloads the browser
             options: {
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
         },
         requirejs: {
             // Watch only main.js so that we do not constantly recompile the .js files
-            files: [ 'app/scripts/main.js' ],
+            files: [ 'app/main.js' ],
             tasks: [ 'requirejs' ],
             // Reloads the browser
             options: {
