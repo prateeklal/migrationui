@@ -3,7 +3,7 @@ require.config({
     'jquery': 'assets/vendor/jquery/dist/jquery',
     'underscore': 'assets/vendor/underscore/underscore',
     'backbone': 'assets/vendor/backbone/backbone',
-    'backbone.radio': 'https://cdnjs.cloudflare.com/ajax/libs/backbone.radio/2.0.0/backbone.radio',
+    'backbone.radio': 'assets/vendor/backbone.radio/src/backbone.radio',
     'backbone.babysitter': 'assets/vendor/backbone.babysitter/lib/backbone.babysitter',
     'backbone.wreqr': 'assets/vendor/backbone.wreqr/lib/backbone.wreqr',
     'backbone.marionette': 'assets/vendor/marionette/lib/backbone.marionette',
@@ -24,7 +24,7 @@ require.config({
   deps: ['jquery', 'underscore']
 });
 
-require(['backbone','router'], function(backbone,Router) {
-  var appRouter =  new Router;
+require(['backbone','router'], function(backbone, Router) {
+  var appRouter =  new Router();
   backbone.history.start();
 });
