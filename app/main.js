@@ -7,6 +7,7 @@ require.config({
     'backbone.babysitter': 'assets/vendor/backbone.babysitter/lib/backbone.babysitter',
     'backbone.wreqr': 'assets/vendor/backbone.wreqr/lib/backbone.wreqr',
     'backbone.marionette': 'assets/vendor/marionette/lib/backbone.marionette',
+    'text': 'assets/vendor/text/text'
   },
   shim: {
     underscore: {
@@ -24,7 +25,15 @@ require.config({
   deps: ['jquery', 'underscore']
 });
 
-require(['backbone','router'], function(backbone, Router) {
+require(['backbone','app','router',], function(backbone,app,Router) {
+//   app.session.checkAuth({
+//     complete: function() {
+//         app.start();
+//         new Router({ controller: RouterController });
+//         backbone.history.start();
+//     }
+// });
+app.start();
   var appRouter =  new Router();
   backbone.history.start();
 });

@@ -20,6 +20,7 @@
     "backbone.marionette": "^2.4.7",
     "backbone.wreqr": "^1.4.0",
     "jquery": "^3.2.1",
+    "text": "github:requirejs/text",    
     "underscore": "^1.8.3",
     "underscore-template-loader": "^0.8.0",
     "webpack": "^3.8.1"

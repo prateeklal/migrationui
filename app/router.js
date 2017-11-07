@@ -1,33 +1,18 @@
-define(['backbone', 'backbone.marionette'], function(Backbone,Marionette) {  
-/* SIMPLE ROUTER IN BACKBONE */
-var HomeView = Backbone.View.extend({
-    template: '<h1>Home</h1>',
-    initialize: function () {
-        this.render();
-    },
-    render: function () {
-        this.$el.html(this.template);
-    }
-});
-var AboutView = Backbone.View.extend({
-    template: '<h1>About</h1>',
-    initialize: function () {
-        this.render();
-    },
-    render: function () {
-        this.$el.html(this.template);
-    }
-});
+define(['backbone', 'backbone.marionette','views/loginView','views/homeView'], function(Backbone,Marionette,loginView,HomeView) {  
 var Router = Marionette.AppRouter.extend({
    
         routes: {          
-        '': 'homeRoute',
+        '': 'loginRoute',
         'home': 'homeRoute',
         'about': 'aboutRoute',          
     },
+    loginRoute:function(){
+      
+        $("#mainApp").html(loginView.el);
+    },
     homeRoute: function () {
-        var homeView = new HomeView();          
-        $("#mainApp").html(homeView.el);
+        var homeView = new HomeView;          
+        $("#mainApp").html(HomeView.el);
     },
     aboutRoute: function () {
         var aboutView = new AboutView();          
