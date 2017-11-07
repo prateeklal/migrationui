@@ -33,6 +33,11 @@ module.exports = function(grunt) {
           }
         }
     },
+    // Jasmine
+    jasmine: {
+      src: ['app/**/*.js', '!**/assets/vendor/**', '!**/main.js'],
+      specs: 'specs/**/*Spec.js'
+    },
     // Task configuration
     less: {
         development: {
@@ -87,6 +92,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Task definition
   grunt.registerTask('default', ['requirejs']);

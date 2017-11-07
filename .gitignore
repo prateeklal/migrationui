@@ -1,5 +1,7 @@
-app/assets/vendor
+.grunt
+app/assets/vendor/
 node_modules
 bower_components
 dist
 .gitignore
+_SpecRunner.html
