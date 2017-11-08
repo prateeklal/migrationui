@@ -1,4 +1,4 @@
-define(['backbone', 'backbone.marionette','views/loginView','views/homeView'], function(Backbone,Marionette,loginView,HomeView) {  
+define(['backbone', 'backbone.marionette','views/loginView','views/homeView'], function(Backbone,Marionette,LoginView,HomeView) {  
 var Router = Marionette.AppRouter.extend({
    
         routes: {          
@@ -7,16 +7,13 @@ var Router = Marionette.AppRouter.extend({
         'about': 'aboutRoute',          
     },
     loginRoute:function(){
-      
-        $("#mainApp").html(loginView.el);
+        var loginView = new LoginView();   
     },
     homeRoute: function () {
-        var homeView = new HomeView;          
-        $("#mainApp").html(HomeView.el);
+        var homeView = new HomeView();           
     },
     aboutRoute: function () {
         var aboutView = new AboutView();          
-        $("#mainApp").html(aboutView.el);
     }
 
   });

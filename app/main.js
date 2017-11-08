@@ -33,7 +33,8 @@ require(['backbone','app','router',], function(backbone,app,Router) {
 //         backbone.history.start();
 //     }
 // });
+var app=new app();
 app.start();
-  var appRouter =  new Router();
+  var appRouter=  new Router();
   backbone.history.start();
 });

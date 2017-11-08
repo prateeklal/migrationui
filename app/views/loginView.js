@@ -1,5 +1,6 @@
-define(['backbone.marionette','Templates'],function(marionette,templates){
-    var loginApp=marionette.View.extend({
+define(['backbone','backbone.marionette','Templates'],function(backbone,marionette,templates){
+    var loginView=marionette.View.extend({
+        el:'#main-content',
         template: _.template(templates.loginPageItemView),
         initialize: function () {
             this.render();
@@ -15,8 +16,9 @@ define(['backbone.marionette','Templates'],function(marionette,templates){
                 if (event) event.preventDefault();
                 console.log(this.$('#inputEmail').val());
                 console.log(this.$('#inputPassword').val());
+                backbone.history.navigate('home',true);
         }
     });
 
-    return new loginApp;
+    return loginView;
 })

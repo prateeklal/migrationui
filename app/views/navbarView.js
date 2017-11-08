@@ -11,5 +11,5 @@ define(['backbone.marionette','Templates'],function(marionette,templates){
 
 
     });
-    return new NavbarView;
+    return NavbarView;
 })
