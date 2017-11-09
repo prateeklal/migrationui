@@ -3,6 +3,7 @@ define(function (require) {
 
     return {
         navbarItemView: require('text!templates/navbar.html'),
-        loginPageItemView: require('text!templates/login.html')
+        loginPageItemView: require('text!templates/login.html'),
+        homeItemView : require('text!templates/home.html')
     };
 });
