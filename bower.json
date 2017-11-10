@@ -7,7 +7,8 @@
     "underscore": "latest",
     "requirejs": "latest",
     "marionette": "latest",
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "requirejs-text":"latest"
   },
   "authors": [
     "Raju Sarvasiddi <raju_sarvasiddi@gap.com>"
