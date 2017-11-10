@@ -8,7 +8,8 @@
     "requirejs": "latest",
     "marionette": "latest",
     "bootstrap": "latest",
-    "requirejs-text":"latest"
+    "requirejs-text":"latest",
+    "foundation-sites": "latest"
   },
   "authors": [
     "Raju Sarvasiddi <raju_sarvasiddi@gap.com>"

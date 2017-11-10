@@ -60,6 +60,23 @@ module.exports = function(grunt) {
           }
         }
     },
+    sass:{
+      dist:{
+        options:{
+
+        },
+        files:{
+          "./app/assets/css/main.css":'./app/assets/css/base.scss'
+        }
+      },dev: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          "./app/assets/css/main.css":'./app/assets/css/base.scss'
+        }
+      }
+    },
     requirejs: {
         compile: {
             options : compileOptions
@@ -75,6 +92,14 @@ module.exports = function(grunt) {
               livereload: true  
             }
         },
+        scss:{
+          files: ['app/assets/css/*.scss'],
+          tasks: ['sass'],
+          // Reloads the browser
+          options: {
+            livereload: true  
+          }
+        },
         requirejs: {
             // Watch only main.js so that we do not constantly recompile the .js files
             files: [ 'app/main.js' ],
@@ -89,13 +114,13 @@ module.exports = function(grunt) {
 
   // Plugin loading
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Task definition
-  grunt.registerTask('default', ['requirejs']);
-  // grunt.registerTask('default');
-
+  grunt.registerTask('default', ['requirejs','sass']);
+  
 };
