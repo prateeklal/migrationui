@@ -7,7 +7,7 @@ require.config({
     'backbone.babysitter': 'assets/vendor/backbone.babysitter/lib/backbone.babysitter',
     'backbone.wreqr': 'assets/vendor/backbone.wreqr/lib/backbone.wreqr',
     'backbone.marionette': 'assets/vendor/marionette/lib/backbone.marionette',
-    'text': 'assets/vendor/text/text'
+    'text': 'assets/vendor/requirejs/text'
   },
   shim: {
     underscore: {
