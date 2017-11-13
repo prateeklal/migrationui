@@ -82,6 +82,10 @@ module.exports = function(grunt) {
             options : compileOptions
         }
     },
+    auto_install: {
+      local: {}
+      
+    },
     watch: {
         less: {
             // Watch all .less files from the styles directory)
@@ -108,8 +112,12 @@ module.exports = function(grunt) {
             options: {
               livereload: true  
             }
-        }
+        },
+        
+    
     }
+   
+    
   });
 
   // Plugin loading
@@ -119,8 +127,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-
+  grunt.loadNpmTasks('grunt-auto-install');
   // Task definition
-  grunt.registerTask('default', ['requirejs','sass']);
-  
+  grunt.registerTask('default', ['auto_install']);
+  grunt.task.run('default');
 };
