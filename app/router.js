@@ -1,4 +1,5 @@
-define(['backbone', 'backbone.marionette','views/loginView','views/homeView', 'views/navbarView','views/addEmpView'], function(Backbone,Marionette,LoginView,HomeView,NavbarView, AddEmpView) {  
+define(['backbone', 'backbone.marionette', 'views/loginView', 'views/homeView', 'views/navbarView','views/addEmpView', 'views/aboutView'], 
+function(Backbone, Marionette, LoginView, HomeView, NavbarView, AddEmpView, AboutView) {  
 var Router = Marionette.AppRouter.extend({
    
     routes: {          
@@ -19,7 +20,8 @@ var Router = Marionette.AppRouter.extend({
         navbarView.$el.show();
     },
     aboutRoute: function () {
-        var aboutView = new AboutView();          
+        var navbarView = new NavbarView();
+        var aboutView = new AboutView();
     },
     addEmpRoute: function(){
     	var navbarView = new NavbarView();

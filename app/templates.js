@@ -8,6 +8,7 @@ define(function (require) {
         rowItemView : require('text!templates/rowTemplate.html'),
         tableItemView : require('text!templates/tableTemplate.html'),
         addEmpItemView : require('text!templates/addEmployee.html'),
-        editEmpItemView : require('text!templates/editEmployee.html')
+        editEmpItemView : require('text!templates/editEmployee.html'),
+        aboutPageView: require('text!templates/about.html')
     };
 });

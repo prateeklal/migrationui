@@ -25,7 +25,7 @@ require.config({
   deps: ['jquery', 'underscore']
 });
 
-require(['backbone','app','router',], function(backbone,app,Router) {
+require(['backbone', 'app', 'router'], function(backbone, app, Router) {
 //   app.session.checkAuth({
 //     complete: function() {
 //         app.start();
@@ -33,7 +33,7 @@ require(['backbone','app','router',], function(backbone,app,Router) {
 //         backbone.history.start();
 //     }
 // });
-var app=new app();
+app = new app();
 app.start();
   var appRouter=  new Router();
   backbone.history.start();
