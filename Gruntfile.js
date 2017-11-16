@@ -39,41 +39,43 @@ module.exports = function(grunt) {
       specs: 'specs/**/*Spec.js'
     },
     // Task configuration
-    less: {
-        development: {
-            options: {
-              compress: false,  // no minification in dev
-            },
-            files: {
-              //compiling base.less into styles.css
-              "./app/assets/css/styles.css":"./app/assets/css/base.less"
-            }
-        },
-        production: {
-          options: {
-            cleancss: true, // minify css
-            // compress: true, // minify css
-          },
-          files: {
-            //compiling base.less into main.min.css
-            "./dist/main.min.css": "./app/assets/css/base.less"
-          }
-        }
-    },
+    // less: {
+    //     development: {
+    //         options: {
+    //           compress: false,  // no minification in dev
+    //         },
+    //         files: {
+    //           //compiling base.less into styles.css
+    //           "./app/assets/css/styles.css":"./app/assets/css/base.less"
+    //         }
+    //     },
+    //     production: {
+    //       options: {
+    //         cleancss: true, // minify css
+    //         // compress: true, // minify css
+    //       },
+    //       files: {
+    //         //compiling base.less into main.min.css
+    //         "./dist/main.min.css": "./app/assets/css/base.less"
+    //       }
+    //     }
+    // },
     sass:{
       dist:{
         options:{
 
         },
         files:{
-          "./app/assets/css/main.css":'./app/assets/css/base.scss'
+          "./app/assets/css/main.css":'./app/assets/css/base.scss',
+          "./app/assets/css/style.css":'./app/assets/css/customstyle.scss'
         }
       },dev: {
         options: {
           style: 'expanded'
         },
         files: {
-          "./app/assets/css/main.css":'./app/assets/css/base.scss'
+          "./app/assets/css/main.css":'./app/assets/css/base.scss',
+          "./app/assets/css/style.css":'./app/assets/css/customstyle.scss'
         }
       }
     },
@@ -90,15 +92,15 @@ module.exports = function(grunt) {
       
     },
     watch: {
-        less: {
-            // Watch all .less files from the styles directory)
-            files: ['app/assets/css/*.less'],
-            tasks: ['less'],
-            // Reloads the browser
-            options: {
-              livereload: true  
-            }
-        },
+        // less: {
+        //     // Watch all .less files from the styles directory)
+        //     files: ['app/assets/css/*.less'],
+        //     tasks: ['less'],
+        //     // Reloads the browser
+        //     options: {
+        //       livereload: true  
+        //     }
+        // },
         scss:{
           files: ['app/assets/css/*.scss'],
           tasks: ['sass'],
@@ -134,6 +136,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-auto-install');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   // Task definition
-  grunt.registerTask('default', ['auto_install','handlebars']);
+  grunt.registerTask('default', ['sass','auto_install','handlebars']);
   grunt.task.run('default');
 };

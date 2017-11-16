@@ -1,0 +1,17 @@
+.menu .li .active {
+  color: #ccc;
+}
+.menu .li a {
+  color: #000;
+  padding-bottom: 0.3rem;
+  white-space: nowrap;
+}
+.menu .li a:hover {
+  color: #a6a6a6;
+  transition: all .3s ease-in-out;
+}
+.menu .li a .active {
+  color: #a6a6a6;
+}
+
+/*# sourceMappingURL=style.css.map */

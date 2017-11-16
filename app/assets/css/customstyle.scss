@@ -1,0 +1,21 @@
+$color-primary-0: #ccc;
+$black:#000;
+
+.menu .li{
+    .active{
+    color: $color-primary-0
+    }
+    a {
+        color: $black;
+        padding-bottom: 0.3rem;
+        white-space: nowrap;
+        &:hover {
+          color: darken($color-primary-0, 15%);
+          transition: all .3s ease-in-out;
+        }
+        & .active {
+          color: darken($color-primary-0, 15%);
+        }
+      }
+}
+
