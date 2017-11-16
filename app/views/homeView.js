@@ -1,4 +1,4 @@
-define(['backbone','backbone.marionette','Templates'],function(backbone,marionette, templates){
+define(['backbone','backbone.marionette','Templates','handlebars'],function(backbone,marionette, templates,handlebars){
 var employeeData = [
 	{id : 1, name : 'javed', age : 27},
 	{id : 2, name : 'Swathi', age : 27},
@@ -48,7 +48,7 @@ var HomeView = marionette.View.extend({
 
       	var TableView = marionette.View.extend({
       	  tagName: 'table',
-      	  className: 'table table-hover',
+      	  className: 'hover',
       	  template: _.template(templates.tableItemView),
 
       	  regions: {

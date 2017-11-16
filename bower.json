@@ -9,7 +9,9 @@
     "marionette": "latest",
     "bootstrap": "latest",
     "requirejs-text":"latest",
-    "foundation-sites": "latest"
+    "foundation-sites": "latest",
+    "font-awesome":"latest",
+    "handlebars":"latest"
   },
   "authors": [
     "Raju Sarvasiddi <raju_sarvasiddi@gap.com>"

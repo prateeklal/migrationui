@@ -1,4 +1,4 @@
-define(function (require) {
+define(function (require,hbars) {
     'use strict';
 
     return {
@@ -9,6 +9,6 @@ define(function (require) {
         tableItemView : require('text!templates/tableTemplate.html'),
         addEmpItemView : require('text!templates/addEmployee.html'),
         editEmpItemView : require('text!templates/editEmployee.html'),
-        aboutPageView: require('text!templates/about.html')
+        aboutItemView:require('hbars!templates/about')
     };
 });

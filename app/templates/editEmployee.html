@@ -1,16 +1,22 @@
-<div>
+<div class="small-12 cell">
 	<form>
-	  <div class="form-group">
-	    <input type="hidden" value="<%= id %>" class="form-control" id="updatedId">
+		<div class="grid-x">
+			<div class="small-12 cell">
+				<input type="hidden" value="<%= id %>" class="form-control" id="updatedId">
+			</div>
 	  </div>
-	  <div class="form-group">
+	  <div class="row">
+				<div class="small-12 cell">
 	    <label for="name">Name:</label>
 	    <input type="text" value="<%= name %>" class="form-control" id="updatedName">
-	  </div>
-	  <div class="form-group">
+		</div>
+		</div>
+		<div class="row">
+				<div class="small-12 cell">
 	    <label for="age">Age:</label>
 	    <input type="text" value="<%= age %>" class="form-control" id="updatedAge">
-	  </div>
-	  <button class="btn btn-primary" id="updateEmpl">Update</button>
+		</div>
+		</div>
+	  <button class="button primary" id="updateEmpl">Update</button>
 	</form>
 </div>

@@ -1,14 +1,23 @@
-define(['backbone', 'backbone.marionette', 'Templates'], function(Backbone, marionette, templates) {
-    var AboutView = marionette.View.extend({
-        el: "#main-content",
-        template: _.template(templates.aboutPageView),
+define(['backbone','backbone.marionette','Templates'],function(backbone,marionette,template){
+    
+    var Model =Backbone.Model.extend({
+        defaults : {
+            name : "swathi",
+            text : "Another Random Value"
+        }
+    })
+	var aboutView = marionette.View.extend({
+        el:'#main-content',
+        model:new Model(),
+        template: template.aboutItemView,
         initialize: function () {
             this.render();
+            
         },
         render: function () {
-            console.log('about page rendered successfully..');
-            this.$el.html(this.template);
+            this.$el.html(this.template({'data':this.model.toJSON()}));
         }
     });
-    return AboutView;
-});
+
+    return aboutView;
+})

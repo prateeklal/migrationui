@@ -80,6 +80,9 @@ module.exports = function(grunt) {
     requirejs: {
         compile: {
             options : compileOptions
+        },
+        paths: {
+          handlebars: "../vendor/js/libs/handlebars.runtime"
         }
     },
     auto_install: {
@@ -113,9 +116,10 @@ module.exports = function(grunt) {
               livereload: true  
             }
         },
-        
-    
-    }
+     },
+     handlebars: {
+      "dist/templates.js": ["app/templates/*.html"]
+    },
    
     
   });
@@ -128,7 +132,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-auto-install');
+  grunt.loadNpmTasks('grunt-contrib-handlebars');
   // Task definition
-  grunt.registerTask('default', ['auto_install']);
+  grunt.registerTask('default', ['auto_install','handlebars']);
   grunt.task.run('default');
 };
