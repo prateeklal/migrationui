@@ -1,0 +1,186 @@
+.main-wrapper {
+    display: flex;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    // padding: 10px;
+    .left-container {
+        padding: 10px 8px;
+        width: 215px;
+        h6 {
+            border-bottom: 1px dotted #ccc;
+            padding: 10px 0 5px 0;
+        }
+        .emp-nav {
+            ul {
+                font-size: 13px;
+                margin: 0;
+                padding: 0;
+                li {
+                    background: #fff;
+                    list-style: none;
+                    a {
+                        color: #666;
+                        display: block;
+                        margin: 0 0 1px 0;
+                        padding: 8px 12px;
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-area {
+        background: #fff;
+        flex: 1;
+        overflow: auto;
+        margin: 0 0 5px 0;
+        padding: 20px;
+        h6 {
+            border-bottom: dotted 1px #ccc;
+        }
+        .emp-list {
+            font-size: 14px;
+            thead th, tbody td {
+                &:first-child {
+                    width: 150px;
+                }
+            }
+            thead th, tbody td {
+                padding: 12px 10px;
+            }
+            thead {
+                border: none;
+                tr {
+                    background: #cae0e6;
+                }
+            }
+            tbody {
+                border: none;
+                tr {
+                    &:nth-child(even) {
+                        background: #f9f9f9;
+                        &:hover {
+                            background: #f5fcff;
+                        }
+                    }
+                }
+            }
+            .actions {
+                text-align: center;
+                width: 125px;
+                i {
+                    cursor: pointer;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+        /* For Progress bar styles */ 
+  
+  /* Responsive Arrow Progress Bar */
+  
+  .arrow-steps {
+    .step {
+        background-color: #ddd;
+        color: #777;
+        cursor: default;
+        float: left;
+        font-size: 14px;
+        margin: 0 1px 0 0;
+        padding: 8px 30px;
+        position: relative;
+        text-align: center;
+        // -webkit-user-select: none;
+        // -moz-user-select: none;
+        // -ms-user-select: none;
+        // user-select: none;
+        a {
+            color: #777;
+            text-decoration: none;
+            }
+        &:after, &:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: -17px;
+            width: 0;
+            height: 0;
+            border-top: 19px solid transparent;
+            border-bottom: 17px solid transparent;
+            border-left: 17px solid #ddd;
+            z-index: 2;
+        }
+    }
+  }
+  
+  
+  
+   
+  
+  .arrow-steps .step:before {
+    right: auto;
+    left: 0;
+    border-left: 17px solid #fff;
+    z-index: 0;
+  }
+  
+  .arrow-steps .step:first-child:before {
+    border: none;
+  }
+  
+  .arrow-steps .step:last-child:after {
+    border: none;
+  }
+  
+  .arrow-steps .step:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  .arrow-steps .step:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .arrow-steps .step span {
+    position: relative;
+  }
+  
+  *.arrow-steps .step.done span:before {
+    content: "✓";
+    position: absolute;
+    top: 2px;
+    left: -10px;
+    font-size: 11px;
+  }
+  
+  .arrow-steps .step.current {
+    color: #fff;
+    background-color: #94b52d;
+  }
+  
+  .arrow-steps .step.current a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .arrow-steps .step.current:after {
+    border-left: 17px solid #94b52d;
+  }
+  
+  .arrow-steps .step.done {
+    color: #173352;
+    background-color: #94b52d;
+  }
+  
+  .arrow-steps .step.done a {
+    color: #173352;
+    text-decoration: none;
+  }
+  
+  .arrow-steps .step.done:after {
+    border-left: 17px solid #94b52d;
+  }
+    }
+}

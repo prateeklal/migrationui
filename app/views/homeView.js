@@ -48,7 +48,7 @@ var HomeView = marionette.View.extend({
 
       	var TableView = marionette.View.extend({
       	  tagName: 'table',
-      	  className: 'hover',
+      	  className: 'unstriped emp-list',
       	  template: _.template(templates.tableItemView),
 
       	  regions: {

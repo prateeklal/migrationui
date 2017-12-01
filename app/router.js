@@ -1,4 +1,4 @@
-define(['backbone', 'backbone.marionette','views/loginView','views/homeView', 'views/navbarView','views/addEmpView','views/aboutView'], function(Backbone,Marionette,LoginView,HomeView,NavbarView, AddEmpView,AboutView) {  
+define(['backbone', 'backbone.marionette','views/loginView','views/homeView', 'views/navbarView','views/addEmpView','views/aboutView','views/sidePanelView'], function(Backbone,Marionette,LoginView,HomeView,NavbarView, AddEmpView,AboutView,SidePanelView) {  
 var Router = Marionette.AppRouter.extend({
    
     routes: {          
@@ -9,7 +9,7 @@ var Router = Marionette.AppRouter.extend({
     },
     loginRoute:function(){
     	var navbarView = new NavbarView();
-    	navbarView.$el.hide();
+        navbarView.$el.hide();
         var loginView = new LoginView(); 
     },
     homeRoute: function () {
@@ -17,6 +17,10 @@ var Router = Marionette.AppRouter.extend({
         homeView.generateTable(); 
         var navbarView = new NavbarView();
         navbarView.$el.show();
+        var sidePanelView=new SidePanelView();
+        sidePanelView.$el.show();
+        
+
     },
     aboutRoute: function () {
         var navbarView = new NavbarView();
@@ -25,7 +29,8 @@ var Router = Marionette.AppRouter.extend({
     },
     addEmpRoute: function(){
     	var navbarView = new NavbarView();
-    	var addEmpView = new AddEmpView();
+        var addEmpView = new AddEmpView();
+        addEmpView.progressTab();
     }
   });
 return Router;

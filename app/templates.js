@@ -9,6 +9,7 @@ define(function (require,hbars) {
         tableItemView : require('text!templates/tableTemplate.html'),
         addEmpItemView : require('text!templates/addEmployee.html'),
         editEmpItemView : require('text!templates/editEmployee.html'),
-        aboutItemView:require('hbars!templates/about')
+        aboutItemView:require('hbars!templates/about'),
+        sidePanelView:require('text!templates/sidepanel.html')
     };
 });

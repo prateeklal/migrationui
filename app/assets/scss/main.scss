@@ -1,0 +1,23 @@
+/* File created on 29th Nov 2017 by Vanavaraju A */
+
+/* Reset styles as per design guides */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import "../../assets/vendor/foundation-sites/scss/foundation";
+@include foundation-everything;
+
+/* Common styles for global use */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+
+/* Partials for  */
+@import "login";
+@import "header";
+@import "home";

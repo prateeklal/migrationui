@@ -1,23 +1,156 @@
-
-	<div class="small-12 cell">
-	<form>
-			<div class="grid-x">
-					<div class="small-12 cell">
-							<label for="email">Employee ID:
-							<input type="text" id="id">
-						</label>
-					</div>
-					<div class="small-12 cell">
-							<label for="email">Name:
-							<input type="text" id="name">
-						</label>
-					</div>
-					<div class="small-12 cell">
-							<label for="email">Age:
-							<input type="text" id="age">
-						</label>
-					</div>
-				</div>
-	  <button class="button success" id="addEmpl">Submit</button>
-	</form>
+<div class="container">
+	<!-- Responsive Arrow Progress Bar -->
+	<div class="arrow-steps clearfix">
+		<div class="step current"> <span> <a href="#" >Employee Info</a></span> </div>
+		<div class="step"> <span><a href="#" >Address</a></span> </div>
+		<div class="step"> <span><a href="#" >Experience</a></span> </div>
+		<div class="step"> <span><a href="#" >Salary Breakup</a></span> </div>	
+	</div>
+	<!-- end Responsive Arrow Progress Bar -->
+	<div class="nav clearfix">
+		<a href="javascript:void(0);" class="prev">Previous</a> |
+		<a href="javascript:void(0);" class="next pull-right">Next</a>
+	</div>
 </div>
+
+<div class="container">
+        <br>
+        <div id="step1">
+            <form class="callout">
+                <h5>Register yourself</h5>
+                <small>Please fill in the form below to register yourself.</small>
+                <div class="grid-x">
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Employee-ID">Employee ID</label>
+                            <input type="text" id="Employee-ID" name="Employee-ID input" placeholder="Employee-ID">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="first-name">First name</label>
+                            <input type="text" id="first-name" name="first name input" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="last-name">Last name</label>
+                            <input type="text" id="last-name" name="last name input" placeholder="Last name">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Date-Of-Joining">Date-Of-Joining</label>
+                            <input type="date" id="Date-Of-Joining" name="Date-Of-Joining input" placeholder="Date-Of-Joining" value="Date-Of-Joining">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Date=Of-Relieving">Date-Of-Relieving</label>
+                            <input type="date" id="Date-Of-Relieving" name="Date-Of-Relieving input" placeholder="Date-Of-Relieving" value="Date-Of-Relieving">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="D.O.B">D.O.B</label>
+                            <input type="date" id="D.O.B" name="D.O.B input" placeholder="D.O.B" value="date">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Pass-Port-Number">Pass-Port-Number</label>
+                            <input type="text" id="Pass-Port-Number" name="Pass-Port-Number input" placeholder="Pass-Port-Number" value="">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="PassPort-IssueDate">PassPort-IssueDate</label>
+                            <input type="date" id="PassPort-IssueDate" name="PassPort-IssueDate input" placeholder="PassPort-IssueDate" value="PassPort-IssueDate">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="passPor-tExpiryDate">PassPort-ExpiryDate</label>
+                            <input type="date" id="passPort-ExpiryDate" name="passPort-ExpiryDate input" placeholder="PassPort-ExpiryDate" value="PassPort-ExpiryDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Aadhar-Card-Number">Aadhar-Card-Number</label>
+                            <input type="text" id="Aadhar-Card-Number" name="Aadhar-Card-Number input" placeholder="Aadhar-Card-Number" value="Aadhar-Card-Number">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="PAN-CARD">Pan-Card</label>
+                            <input type="text" id="PAN-CARD" name="PAN-CARD input" placeholder="Pan-Card" value="Pan-Card">
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email input" placeholder="Email" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Male">Male</label>
+                            <select>
+                                <option value="Select">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="MaritalStatus">MaritalStatus</label>
+                            <select>
+                                <option value="Select">Select</option>
+                                <option value="Married">Married</option>
+                                <option value="Un Married">Un Married</option>
+                                <option value="Single">Single</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columns small-3">
+                        <div class="floated-label-wrapper">
+                            <label for="Blood-Group">Blood-Group</label>
+                            <select>
+                                <option value="Select">Select</option>
+                                <option value="A+ve">A+ve</option>
+                                <option value="A-ve">A-ve</option>
+                                <option value="B+ve">B+ve</option>
+                                <option value="B-ve">B-ve</option>
+                                <option value="AB+ve">AB+ve</option>
+                                <option value="AB-ve">A-ve</option>
+                                <option value="O+ve">O+ve</option>
+                                <option value="O-ve">O-ve</option>
+                            </select>
+
+                        </div>
+                    </div>
+				</div>
+				<div class="grid-x">
+                    <a href="address.html">
+                        <button type="button" class="button expanded submit" id="steptwosubmit" onclick="return handleChange()">Save</button>
+                        <!-- <input class="button expanded submit" type="back" value="SUBMIT" id="steptwosubmit" onclick="return handleChange()"> -->
+                    </a>
+				</div>
+            </form>
+            </div>
+
+
+        </div>
+    </div>
