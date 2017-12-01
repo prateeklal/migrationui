@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         },
         files:{
           "./app/assets/css/main.css":'./app/assets/css/base.scss',
-          "./app/assets/css/style.css":'./app/assets/css/customstyle.scss'
+          "./app/assets/css/style.css":'./app/assets/scss/main.scss'
         }
       },dev: {
         options: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         },
         files: {
           "./app/assets/css/main.css":'./app/assets/css/base.scss',
-          "./app/assets/css/style.css":'./app/assets/css/customstyle.scss'
+          "./app/assets/css/style.css":'./app/assets/scss/main.scss'
         }
       }
     },
