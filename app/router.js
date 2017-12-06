@@ -14,7 +14,7 @@ var Router = Marionette.AppRouter.extend({
     },
     homeRoute: function () {
         var homeView = new HomeView();
-        homeView.generateTable(); 
+        // homeView.generateTable();
         var navbarView = new NavbarView();
         navbarView.$el.show();
         var sidePanelView=new SidePanelView();

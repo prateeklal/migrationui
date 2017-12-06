@@ -26,6 +26,7 @@ var HomeView = marionette.View.extend({
     },
     render: function () {
         this.$el.html(this.template);
+        // this.generateTable();
     },
     events:{
 		"click #editEmp" : "editEmployee",
